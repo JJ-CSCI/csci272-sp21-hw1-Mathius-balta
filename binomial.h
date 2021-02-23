@@ -2,18 +2,10 @@
 #define Binomial_h
 class Binomial {
 private:
-  float coef[3] {0, 1.0, 1.0};
-  int pow[3] {0, 1, 1};
+  float coef[3];
+  int pow[3];
 public:
-  Binomial();
-
-  Binomial(float x);
-  
-  Binomial(float x, int y);
-
-  Binomial(float x, int y, float a);
-  
-  Binomial(float x, int a, float y, int b);
+  Binomial(float x = 1.0, int a = 1, float y = 1.0, int b = 1);
   
   int GetPower(int i);
 

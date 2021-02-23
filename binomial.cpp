@@ -1,43 +1,6 @@
 #include "binomial.h"
 #include "catch.hpp"
 
-Binomial::Binomial() {
-    coef[1] = 1.0;
-    coef[2] = 1.0;
-    pow[1] = 1;
-    pow[2] = 1;
-  }
-Binomial::Binomial(float x) {
-    coef[1] = x;
-    coef[2] = 1.0;
-    pow[1] = 1;
-    pow[2] = 1;
-  }
-
-Binomial::Binomial(float x, int y) {
-    coef[2] = 1.0;
-    pow[2] = 1;
-    coef[1] = x;
-
-    if (y < 1){
-      pow[1] = 1;
-    }
-    else
-    pow[1] = y;
-  }
-
-Binomial::Binomial(float x, int y, float a) {
-  pow[2] = 1;
-  coef[1] = x;
-  coef[2] =a;
-
-  if (y < 1){
-    pow[1] = 1;
-    }
-    else
-    pow[1] = y;
-  }
-
 Binomial::Binomial(float x, int a, float y, int b) {
   coef[1] = x;
   coef[2] =y;
